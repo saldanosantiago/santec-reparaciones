@@ -26,7 +26,12 @@
         <nav>
             <div class="nav-container">
                 <span class="nav-logo">SANTEC</span>
+
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>   
                 <ul class="nav-links">
+
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -217,4 +222,15 @@
         </div>
     </footer>
 
-</html>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>>

@@ -8,6 +8,10 @@
     --color-border: #00d4ff18;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -24,6 +28,16 @@ body {
     justify-content: space-between;
     padding: 16px 40px;
 }
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-size: 22px;
+    cursor: pointer;
+}
+
 
 .nav-logo {
     color: var(--color-accent);
@@ -352,18 +366,18 @@ footer {
     padding: 48px 40px 0;
 }
 
-.footer-grid{
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 
-.footer-logo{
+.footer-logo {
     color: var(--color-accent);
     font-weight: bold;
 }
 
-.footer-col-title{
+.footer-col-title {
     color: var(--color-text);
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -397,7 +411,7 @@ footer {
     color: var(--color-accent);
 }
 
-.footer-bottom{
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--color-border);
@@ -409,7 +423,7 @@ footer {
     font-size: 12px;
 }
 
-.footer-redes{
+.footer-redes {
     display: flex;
     gap: 15px;
     color: var(--color-text-muted);
@@ -420,7 +434,6 @@ footer {
 /*=================
 MAS DETALLES
 ==================*/
-
 @media (max-width: 768px) {
     .servicios-grid {
         grid-template-columns: 1fr;
@@ -432,6 +445,23 @@ MAS DETALLES
 
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--color-card);
+        padding: 20px;
+        gap: 20px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 
     h1 {
