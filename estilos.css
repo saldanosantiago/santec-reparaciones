@@ -110,6 +110,8 @@ h1 {
     border-color: var(--color-accent-hover);
 }
 
+
+
 .btn-primary:active {
     transform: scale(0.97);
 
@@ -142,7 +144,7 @@ h1 {
 SECCION SERVICIOS
 ================*/
 
-.servicios {
+#servicios {
     border-top: 1px solid var(--color-border);
     padding: 80px 40px;
 }
@@ -309,6 +311,7 @@ SECCION CONTACTO
 }
 
 
+
 .contacto-dato i {
     color: var(--color-accent);
     font-size: 18px;
@@ -419,7 +422,50 @@ MAS DETALLES
 ==================*/
 
 @media (max-width: 768px) {
-    .servicios {
+    .servicios-grid {
         grid-template-columns: 1fr;
+    }
+
+    .nosotros-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .hero {
+        padding: 48px 20px;
+    }
+
+    #nosotros {
+        padding: 48px 20px;
+    }
+
+    .contacto-container {
+        padding: 16px 20px;
+    }
+
+    .contacto-datos {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .separador {
+        width: 50px;
+        height: 1px;
+    }
+
+    footer {
+        padding: 40px 20px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 }
